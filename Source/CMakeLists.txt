@@ -27,5 +27,4 @@ add_library(astcenc SHARED
     mathlib.cpp
     softfloat.cpp
     stb_image.c
-    astc_stb_tga.cpp
-    astc_lib.cpp)
+    astc_stb_tga.cpp)
