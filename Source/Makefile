@@ -55,15 +55,15 @@ CPPFLAGS = -O3 -Wall -W -Wextra -msse2 -mfpmath=sse
 
 
 astcenc: $(OBJECTS) stb_image.o
-	g++ -o $@ $^ $(CPPFLAGS) -lpthread
+	$(CXX) -o $@ $^ $(CPPFLAGS) -lpthread
 
 
 $(OBJECTS): %.o: %.cpp $(HEADERS)
-	g++ -c -o $@ $< $(CPPFLAGS)
+	$(CXX) -c -o $@ $< $(CPPFLAGS)
 
 
 stb_image.o: stb_image.c
-	g++ -c -o $@ $< $(CPPFLAGS)
+	$(CXX) -c -o $@ $< $(CPPFLAGS)
 
 
 clean:
